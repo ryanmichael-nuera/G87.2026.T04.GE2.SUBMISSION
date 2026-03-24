@@ -10,11 +10,12 @@ class EnterpriseManager:
     def __init__(self):
         pass
 
-    @staticmethod
-    def register_project(company_cif: str, project_achronym: str, project_description: str,
+    def register_project(self, company_cif: str, project_achronym: str, project_description: str,
                          department: str, date: str, budget: float):
         # CIF Check
         if not isinstance(company_cif, str):
+            raise EnterpriseManagementException("Invalid Company Cif")
+        if not self.validate_cif(company_cif):
             raise EnterpriseManagementException("Invalid Company Cif")
 
         objProject = EnterpriseProject(company_cif, project_achronym, project_description,
@@ -27,4 +28,10 @@ class EnterpriseManager:
     def validate_cif(cif: str):
         """RETURNs TRUE IF THE IBAN RECEIVED IS VALID SPANISH IBAN,
         OR FALSE IN OTHER CASE"""
+
+        if not cif[0].isalpha():
+            return False
+        if not len(cif) == 9:
+            return False
+
         return True
