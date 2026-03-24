@@ -44,6 +44,15 @@ class EnterpriseManager:
         # date check
         if not isinstance(date, str):
             raise EnterpriseManagementException("Invalid Date")
+        try:
+            date_valid = datetime.strptime(date, "%d/%m/%Y").date()
+            year = date_valid.year
+
+            if date_valid < datetime.today().date():
+                raise ValueError
+            if not (2025 <= year <= 2027):
+                raise ValueError
+        except ValueError: raise EnterpriseManagementException("Invalid Date")
 
         objProject = EnterpriseProject(company_cif, project_achronym, project_description,
                                        department, date, budget)
