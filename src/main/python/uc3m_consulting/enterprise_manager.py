@@ -11,6 +11,11 @@ class EnterpriseManager:
         pass
 
     @staticmethod
+    def register_project(self, company_cif: str, project_achronym: str, project_description: str,
+                         department: str, date: str, budget: float):
+        return True
+
+    @staticmethod
     def validate_cif(cif: str):
         """RETURNs TRUE IF THE IBAN RECEIVED IS VALID SPANISH IBAN,
         OR FALSE IN OTHER CASE"""
