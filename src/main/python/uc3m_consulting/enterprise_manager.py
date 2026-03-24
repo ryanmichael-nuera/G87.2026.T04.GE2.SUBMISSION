@@ -30,6 +30,12 @@ class EnterpriseManager:
             raise EnterpriseManagementException("Invalid Project Acronym Characters")
 
         # Project_description check
+        if not isinstance(project_description, str):
+            raise EnterpriseManagementException("Invalid Project Description")
+        if not (10 <= len(project_description) <= 30):
+            raise EnterpriseManagementException("Invalid Project Description Length")
+
+
 
 
 
