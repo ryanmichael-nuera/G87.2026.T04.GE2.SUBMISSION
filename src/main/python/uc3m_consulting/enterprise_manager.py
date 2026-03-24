@@ -25,6 +25,13 @@ class EnterpriseManager:
             raise EnterpriseManagementException("Invalid Project Acronym")
         if not (5 <= len(project_achronym) <= 10):
             raise EnterpriseManagementException("Invalid Project Acronym Length")
+        # isalnum() checks for a-z, A-Z, 0-9
+        if not project_achronym.isalnum():
+            raise EnterpriseManagementException("Invalid Project Acronym Characters")
+
+        # Project_description check
+
+
 
         objProject = EnterpriseProject(company_cif, project_achronym, project_description,
                                        department, date, budget)

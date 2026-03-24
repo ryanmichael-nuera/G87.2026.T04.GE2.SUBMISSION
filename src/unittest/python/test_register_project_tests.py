@@ -87,7 +87,7 @@ class MyTestCase(unittest.TestCase):
     def test_tc12(self):
         manager = EnterpriseManager()
         self.assertRaises(EnterpriseManagementException, manager.register_project,"B12345678",
-                          "PR_F538FG07", "car automatic development",
+                          "PR_F538FG0", "car automatic development",
                                        "Logistics", "1/1/2027", 50000.00)
 
     #ECNV10
