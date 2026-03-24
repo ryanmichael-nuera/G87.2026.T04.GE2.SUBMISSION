@@ -124,13 +124,13 @@ class MyTestCase(unittest.TestCase):
     def test_tc18(self):
         manager = EnterpriseManager()
         self.assertRaises(EnterpriseManagementException, manager.register_project, "B12345678",
-                          "PR001", "valid texts", "HR", "12/12/2025", 50000.00)
+                          "PR001", "valid texts", "HR", 12122025, 50000.00)
 
     # ECNV16
     def test_tc19(self):
         manager = EnterpriseManager()
         self.assertRaises(EnterpriseManagementException, manager.register_project, "B12345678",
-                          "PR001", "valid texts", "Logistics", 10/14/2025, 50000.00)
+                          "PR001", "valid texts", "Logistics", "10/14/2025", 50000.00)
 
     # ECNV17 - BLNV7
     def test_tc20(self):

@@ -41,7 +41,9 @@ class EnterpriseManager:
         if department not in ("HR", "Finance", "Legal", "Logistics"):
             raise EnterpriseManagementException("Invalid Department")
 
-
+        # date check
+        if not isinstance(date, str):
+            raise EnterpriseManagementException("Invalid Date")
 
         objProject = EnterpriseProject(company_cif, project_achronym, project_description,
                                        department, date, budget)
