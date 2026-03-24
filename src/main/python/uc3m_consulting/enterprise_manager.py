@@ -54,6 +54,17 @@ class EnterpriseManager:
                 raise ValueError
         except ValueError: raise EnterpriseManagementException("Invalid Date")
 
+        # budget check
+        try:
+            if not isinstance(budget, float):
+                raise ValueError
+            if not (budget * 100).is_integer():
+                raise ValueError
+            if not (50000.00 <= budget <= 1000000.00):
+                raise ValueError
+        except ValueError:
+            raise EnterpriseManagementException("Invalid Budget")
+
         objProject = EnterpriseProject(company_cif, project_achronym, project_description,
                                        department, date, budget)
 
