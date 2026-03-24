@@ -35,7 +35,11 @@ class EnterpriseManager:
         if not (10 <= len(project_description) <= 30):
             raise EnterpriseManagementException("Invalid Project Description Length")
 
-
+        # department check
+        if not isinstance(department, str):
+            raise EnterpriseManagementException("Invalid Department")
+        if department not in ("HR", "Finance", "Legal", "Logistics"):
+            raise EnterpriseManagementException("Invalid Department")
 
 
 
