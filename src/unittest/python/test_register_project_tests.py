@@ -7,9 +7,6 @@ from uc3m_consulting import EnterpriseManagementException
 
 class MyTestCase(unittest.TestCase):
     """class for testing the register_order method"""
-    def test_something( self ):
-        """dummy test"""
-        self.assertEqual(True, False)
 
     def test_tc1(self):
         manager = EnterpriseManager()

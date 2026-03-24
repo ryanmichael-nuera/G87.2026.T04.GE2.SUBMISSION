@@ -13,7 +13,11 @@ class EnterpriseManager:
     @staticmethod
     def register_project(self, company_cif: str, project_achronym: str, project_description: str,
                          department: str, date: str, budget: float):
-        return True
+        objProject = EnterpriseProject(company_cif, project_achronym, project_description,
+                                       department, date, budget)
+
+        return objProject.project_id
+
 
     @staticmethod
     def validate_cif(cif: str):
