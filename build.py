@@ -6,10 +6,13 @@ use_plugin("python.unittest")
 use_plugin("python.coverage")
 
 
-name = "G8X.2026.TXX.EG2"
+name = "G8X.2026.T04.GE2.SUBMISSION"
 default_task = "publish"
-
 
 @init
 def set_properties(project):
-    pass
+    project.set_property("coverage_include_patterns", ["uc3m_consulting.enterprise_manager"])
+
+    project.set_property("coverage_break_build", True)
+    project.set_property("coverage_threshold_warn", 0)
+    project.set_property("coverage_threshold_fail", 70)

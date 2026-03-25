@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test_register_project_tests.MyTestCase-20260325170032" tests="26" file="test_register_project_tests.py" time="0.009" timestamp="2026-03-25T17:00:33" failures="0" errors="0" skipped="0">
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc1" time="0.002" timestamp="2026-03-25T17:00:32"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc10" time="0.000" timestamp="2026-03-25T17:00:32"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc11" time="0.000" timestamp="2026-03-25T17:00:32"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc12" time="0.000" timestamp="2026-03-25T17:00:32"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc13" time="0.000" timestamp="2026-03-25T17:00:32"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc14" time="0.000" timestamp="2026-03-25T17:00:32"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc15" time="0.000" timestamp="2026-03-25T17:00:32"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc16" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc17" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc18" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc19" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc2" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc20" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc21" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc22" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc23" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc24" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc25" time="0.001" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc26" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc3" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc4" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc5" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc6" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc7" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc8" time="0.000" timestamp="2026-03-25T17:00:33"/>
+	<testcase classname="test_register_project_tests.MyTestCase" name="test_tc9" time="0.000" timestamp="2026-03-25T17:00:33"/>
+</testsuite>

@@ -1,0 +1,10 @@
+ryanmichaelnuera@Ryans-MacBook-Pro-9 G87.2026.T04.GE2.SUBMISSION % PYTHONPATH=src/main/python coverage run -m unittest discover -s src/unittest/python
+..........................
+----------------------------------------------------------------------
+Ran 26 tests in 0.008s
+
+OK
+ryanmichaelnuera@Ryans-MacBook-Pro-9 G87.2026.T04.GE2.SUBMISSION % coverage report -m | grep enterprise_manager
+src/main/python/uc3m_consulting/enterprise_manager.py                   64      1    98%   63
+
+NOTE: This coverage shows that testing covers 98% of the code written
