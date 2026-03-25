@@ -174,16 +174,23 @@ class MyTestCase(unittest.TestCase):
         self.assertRaises(EnterpriseManagementException, manager.register_project, "B12345678",
                           "PR001", "valid texts", "Legal", "12/12/2026", "50000.50")
 
-    # ECNV20-BLNV19
+    # ECNV20-BLNV9
     def test_tc23(self):
-        """" INVALID BUDGET: Invalid budget value"""
+        """" INVALID BUDGET: Invalid budget value - budget value < 50000.00"""
         manager = EnterpriseManager()
         self.assertRaises(EnterpriseManagementException, manager.register_project, "B12345678",
-                          "PR001", "valid texts", "Logistics", "31/12/2026", 45000.00)
+                          "PR001", "valid texts", "Logistics", "31/12/2026", 49999.99)
+
+    # ECNV20-BLNV10
+    def test_tc24(self):
+        """" INVALID BUDGET: Invalid budget value - budget value > 100000.00 """
+        manager = EnterpriseManager()
+        self.assertRaises(EnterpriseManagementException, manager.register_project, "B12345678",
+                          "PR001", "valid texts", "Logistics", "31/12/2026", 100000.01)
 
     # ECNV22
     @patch("uc3m_consulting.enterprise_project.hashlib.md5")
-    def test_tc24(self, mock_md5):
+    def test_tc25(self, mock_md5):
         """" INVALID OUTPUT: String not returned through MD5"""
         mock_md5.side_effect = Exception("MD5 failure")
 
@@ -195,7 +202,7 @@ class MyTestCase(unittest.TestCase):
 
     # ECNV23
     @patch("builtins.open")
-    def test_tc25(self, mock_open):
+    def test_tc26(self, mock_open):
         """" INVALID OUTPUT: Data not saved in JSON File"""
         mock_open.side_effect = OSError("JSON Write Error")
 
