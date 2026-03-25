@@ -70,12 +70,6 @@ class EnterpriseManager:
         obj_project = EnterpriseProject(company_cif, project_achronym, project_description,
                                        department, date, budget)
 
-        with open("corporate_operations.json", "w") as file:
-            json.dump(obj_project.to_json(), file, indent=4)
-
-        if obj_project.project_id is None:
-            raise EnterpriseManagementException("Invalid Project ID")
-
         return obj_project.project_id
 
 

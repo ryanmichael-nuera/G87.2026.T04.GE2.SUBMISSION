@@ -1,9 +1,12 @@
 """class for testing the register_order method"""
 import unittest
 from datetime import datetime
+import hashlib
 
+from unittest.mock import patch
 from uc3m_consulting import EnterpriseManager
 from uc3m_consulting import EnterpriseManagementException
+
 
 class MyTestCase(unittest.TestCase):
     """class for testing the register_order method"""
@@ -158,17 +161,26 @@ class MyTestCase(unittest.TestCase):
                           "PR001", "valid texts", "Logistics", "31/12/2026", 45000.00)
 
     # ECNV22
-    def test_tc24(self):
+    @patch("uc3m_consulting.enterprise_project.hashlib.md5")
+    def test_tc24(self, mock_md5):
+        mock_md5.side_effect = Exception("MD5 failure")
+
         manager = EnterpriseManager()
-        obj = manager.register_project("B12345678", "PRO01", "car automatic development",
-                                       "HR", "31/12/2027", 50000.00)
-        self.assertRaises(EnterpriseManagementException, )
+
+        with self.assertRaises(EnterpriseManagementException) as context:
+            manager.register_project("B12345678", "PRO01", "car automatic development",
+                                     "HR", "31/12/2027", 50000.00)
 
     # ECNV23
-    def test_tc25(self):
+    @patch("builtins.open")
+    def test_tc25(self, mock_open):
+        mock_open.side_effect = OSError("JSON Write Error")
+
         manager = EnterpriseManager()
-        self.assertRaises(EnterpriseManagementException, manager.register_project, "B12345678",
-                          "PR001", "valid texts", "Logistics", "31/12/2026", 45000.00)
+
+        with self.assertRaises(EnterpriseManagementException) as context:
+            manager.register_project("B12345678", "PRO01", "car automatic development",
+                                       "HR", "31/12/2027", 50000.00)
 
 if __name__ == '__main__':
     unittest.main()
