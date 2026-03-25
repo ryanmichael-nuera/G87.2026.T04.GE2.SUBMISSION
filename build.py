@@ -6,7 +6,7 @@ use_plugin("python.unittest")
 use_plugin("python.coverage")
 
 
-name = "G8X.2026.T04.GE2.SUBMISSION"
+name = "G8X.2026.T04.GE2"
 default_task = "publish"
 
 @init
