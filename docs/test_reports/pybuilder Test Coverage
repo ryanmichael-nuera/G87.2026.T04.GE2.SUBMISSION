@@ -1,69 +1,69 @@
 ryanmichaelnuera@Ryans-MacBook-Pro-9 G87.2026.T04.GE2.SUBMISSION % pyb run_unit_tests
 PyBuilder version 0.13.18
-Build started at 2026-03-25 17:12:00
+Build started at 2026-03-25 17:31:46
 ------------------------------------------------------------
-[INFO]  Building G8X.2026.T04.GE2.SUBMISSION version 1.0.dev0
-[INFO]  Executing build in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION
+[INFO]  Building G8X.2026.T04.GE2 version 1.0.dev0
+[INFO]  Executing build in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2
 [INFO]  Going to execute task run_unit_tests
 [INFO]  Processing plugin packages 'coverage>=6.0' to be installed with {'upgrade': True}
 [INFO]  Processing plugin packages 'unittest-xml-reporting>=3.0.4' to be installed with {'upgrade': True}
-[INFO]  Creating target 'build' VEnv in '/Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION/target/venv/build/cpython-3.13.9.final.0'
-[INFO]  Creating target 'test' VEnv in '/Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION/target/venv/test/cpython-3.13.9.final.0'
+[INFO]  Creating target 'build' VEnv in '/Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2/target/venv/build/cpython-3.13.9.final.0'
+[INFO]  Creating target 'test' VEnv in '/Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2/target/venv/test/cpython-3.13.9.final.0'
 [INFO]  Running unit tests
-[INFO]  Executing unit tests from Python modules in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION/src/unittest/python
-[INFO]  Executed 26 unit tests
+[INFO]  Executing unit tests from Python modules in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2/src/unittest/python
+[INFO]  Executed 27 unit tests
 [INFO]  All unit tests passed.
 ------------------------------------------------------------
 BUILD SUCCESSFUL
 ------------------------------------------------------------
 Build Summary
-             Project: G8X.2026.T04.GE2.SUBMISSION
+             Project: G8X.2026.T04.GE2
              Version: 1.0.dev0
-      Base directory: /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION
+      Base directory: /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2
         Environments:
-               Tasks: prepare [1327 ms] compile_sources [0 ms] run_unit_tests [174 ms]
-Build finished at 2026-03-25 17:12:02
-Build took 1 seconds (1934 ms)
+               Tasks: prepare [1552 ms] compile_sources [0 ms] run_unit_tests [181 ms]
+Build finished at 2026-03-25 17:31:48
+Build took 2 seconds (2193 ms)
 ryanmichaelnuera@Ryans-MacBook-Pro-9 G87.2026.T04.GE2.SUBMISSION % pyb publish
 PyBuilder version 0.13.18
-Build started at 2026-03-25 17:12:07
+Build started at 2026-03-25 17:32:08
 ------------------------------------------------------------
-[INFO]  Building G8X.2026.T04.GE2.SUBMISSION version 1.0.dev0
-[INFO]  Executing build in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION
+[INFO]  Building G8X.2026.T04.GE2 version 1.0.dev0
+[INFO]  Executing build in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2
 [INFO]  Going to execute task publish
 [INFO]  Processing plugin packages 'coverage>=6.0' to be installed with {'upgrade': True}
 [INFO]  Processing plugin packages 'unittest-xml-reporting>=3.0.4' to be installed with {'upgrade': True}
-[INFO]  Creating target 'build' VEnv in '/Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION/target/venv/build/cpython-3.13.9.final.0'
-[INFO]  Creating target 'test' VEnv in '/Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION/target/venv/test/cpython-3.13.9.final.0'
+[INFO]  Creating target 'build' VEnv in '/Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2/target/venv/build/cpython-3.13.9.final.0'
+[INFO]  Creating target 'test' VEnv in '/Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2/target/venv/test/cpython-3.13.9.final.0'
 [INFO]  Requested coverage for tasks: pybuilder.plugins.python.unittest_plugin:run_unit_tests
 [INFO]  Running unit tests
-[INFO]  Executing unit tests from Python modules in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION/src/unittest/python
-[INFO]  Executed 26 unit tests
+[INFO]  Executing unit tests from Python modules in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2/src/unittest/python
+[INFO]  Executed 27 unit tests
 [INFO]  All unit tests passed.
-[INFO]  Building distribution in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION/target/dist/G8X.2026.T04.GE2.SUBMISSION-1.0.dev0
-[INFO]  Copying scripts to /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION/target/dist/G8X.2026.T04.GE2.SUBMISSION-1.0.dev0/scripts
+[INFO]  Building distribution in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2/target/dist/G8X.2026.T04.GE2-1.0.dev0
+[INFO]  Copying scripts to /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2/target/dist/G8X.2026.T04.GE2-1.0.dev0/scripts
 [INFO]  Collecting coverage information for 'pybuilder.plugins.python.unittest_plugin:run_unit_tests'
 [WARN]  ut_coverage_branch_threshold_warn is 0 and branch coverage will not be checked
 [WARN]  ut_coverage_branch_partial_threshold_warn is 0 and partial branch coverage will not be checked
 [INFO]  Running unit tests
-[INFO]  Executing unit tests from Python modules in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION/src/unittest/python
-[INFO]  Executed 26 unit tests
+[INFO]  Executing unit tests from Python modules in /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2/src/unittest/python
+[INFO]  Executed 27 unit tests
 [INFO]  All unit tests passed.
 [WARN]  Test coverage below 70% for uc3m_consulting.project_document: 57%
 [INFO]  Overall pybuilder.plugins.python.unittest_plugin.run_unit_tests coverage is 82%
 [INFO]  Overall pybuilder.plugins.python.unittest_plugin.run_unit_tests branch coverage is 97%
 [INFO]  Overall pybuilder.plugins.python.unittest_plugin.run_unit_tests partial branch coverage is 97%
-[INFO]  Overall G8X.2026.T04.GE2.SUBMISSION coverage is 82%
-[INFO]  Overall G8X.2026.T04.GE2.SUBMISSION branch coverage is 97%
-[INFO]  Overall G8X.2026.T04.GE2.SUBMISSION partial branch coverage is 97%
+[INFO]  Overall G8X.2026.T04.GE2 coverage is 82%
+[INFO]  Overall G8X.2026.T04.GE2 branch coverage is 97%
+[INFO]  Overall G8X.2026.T04.GE2 partial branch coverage is 97%
 ------------------------------------------------------------
 BUILD SUCCESSFUL
 ------------------------------------------------------------
 Build Summary
-             Project: G8X.2026.T04.GE2.SUBMISSION
+             Project: G8X.2026.T04.GE2
              Version: 1.0.dev0
-      Base directory: /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2.SUBMISSION
+      Base directory: /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2
         Environments:
-               Tasks: prepare [1402 ms] compile_sources [0 ms] run_unit_tests [164 ms] package [3 ms] run_integration_tests [0 ms] verify [0 ms] coverage [351 ms] publish [0 ms]
-Build finished at 2026-03-25 17:12:10
-Build took 2 seconds (2237 ms)
+               Tasks: prepare [1278 ms] compile_sources [0 ms] run_unit_tests [176 ms] package [3 ms] run_integration_tests [0 ms] verify [0 ms] coverage [382 ms] publish [0 ms]
+Build finished at 2026-03-25 17:32:11
+Build took 2 seconds (2304 ms)

@@ -1,7 +1,6 @@
 """ ADD SOMETHING """
 import json
 from datetime import datetime
-from decimal import Decimal, InvalidOperation
 
 from .enterprise_management_exception import EnterpriseManagementException
 from .enterprise_project import EnterpriseProject
@@ -60,14 +59,10 @@ class EnterpriseManager:
         try:
             if not isinstance(budget, float):
                 raise ValueError
-
-            s = f"{budget:.2f}"
-            if '.' not in s or len(s.split('.')[1]) != 2:
-                raise ValueError("Invalid Budget")
-
+            if not (budget * 100).is_integer():
+                raise ValueError
             if not 50000.00 <= budget <= 1000000.00:
                 raise ValueError
-
         except ValueError as exc:
             raise EnterpriseManagementException("Invalid Budget") from exc
 
