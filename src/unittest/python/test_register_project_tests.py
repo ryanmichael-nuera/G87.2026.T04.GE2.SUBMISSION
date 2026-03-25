@@ -13,7 +13,7 @@ class MyTestCase(unittest.TestCase):
     def test_tc1(self):
         """ VALID CASE 1 """
         manager = EnterpriseManager()
-        obj = manager.register_project("B12345678","PRO01", "car automatic development",
+        obj = manager.register_project("B12345678","PRO01", "valid text",
         "HR", "31/12/2027", 50000.00)
         self.assertIsInstance(obj, str, "return should be string")
         self.assertEqual(len(obj), 32, "should be length of 32")
@@ -32,7 +32,7 @@ class MyTestCase(unittest.TestCase):
         """ VALID CASE 3 """
         manager = EnterpriseManager()
         obj = manager.register_project("B12345678","PR0000002", "valid textvalid textvalid tex",
-        "Legal", "31/12/2027", 999999.99)
+        "Legal", "01/01/2027", 999999.99)
         self.assertIsInstance(obj, str, "return should be string")
         self.assertEqual(len(obj), 32, "should be length of 32")
         self.assertTrue(obj.isalnum(), "should not have special characters")
@@ -40,8 +40,8 @@ class MyTestCase(unittest.TestCase):
     def test_tc4(self):
         """" VALID CASE 4 """
         manager = EnterpriseManager()
-        obj = manager.register_project("B12345678","PRCF538FG0", "valid text",
-        "Logistics", "31/12/2026", 1000000.00)
+        obj = manager.register_project("B12345678","PRCF538FG0", "valid textvalid textvalid text",
+        "Logistics", "31/12/2027", 1000000.00)
         self.assertIsInstance(obj, str, "return should be string")
         self.assertEqual(len(obj), 32, "should be length of 32")
         self.assertTrue(obj.isalnum(), "should not have special characters")
@@ -52,7 +52,7 @@ class MyTestCase(unittest.TestCase):
         """" INVALID CIF """
         manager = EnterpriseManager()
         self.assertRaises(EnterpriseManagementException, manager.register_project, 12345678,
-                          "PR001", "car automatic development", "HR", "1/1/2027", 50000.00)
+                          "PR001", "valid text", "HR", "1/1/2027", 50000.00)
 
     # ECNV3, BLNV1
     def test_tc6(self):
@@ -87,21 +87,21 @@ class MyTestCase(unittest.TestCase):
         """" INVALID PROJECT_ACHRONYM: length = 4"""
         manager = EnterpriseManager()
         self.assertRaises(EnterpriseManagementException,manager.register_project,"B12345678",
-                          "PR07", "car automatic development", "HR", "31/12/2026", 50000.00)
+                          "PR07", "valid text", "HR", "31/12/2026", 50000.00)
 
     # ECNV8, BLNV4
     def test_tc11(self):
         """" INVALID PROJECT_ACHRONYM: length = 11"""
         manager = EnterpriseManager()
         self.assertRaises(EnterpriseManagementException, manager.register_project,"B12345678",
-                          "PRCF538FG07", "car automatic development", "HR", "31/12/2026", 50000.00)
+                          "PRCF538FG07", "valid text", "HR", "31/12/2026", 50000.00)
 
     #ECNV9
     def test_tc12(self):
         """" INVALID PROJECT_ACHRONYM: has characters other than specified"""
         manager = EnterpriseManager()
         self.assertRaises(EnterpriseManagementException, manager.register_project,"B12345678",
-                          "PR_F538FG0", "car automatic development",
+                          "PR_F538FG0", "valid text",
                                        "Logistics", "1/1/2027", 50000.00)
 
     #ECNV10
@@ -181,12 +181,12 @@ class MyTestCase(unittest.TestCase):
         self.assertRaises(EnterpriseManagementException, manager.register_project, "B12345678",
                           "PR001", "valid texts", "Logistics", "31/12/2026", 49999.99)
 
-    # ECNV20-BLNV10
+    # ECNV21-BLNV10
     def test_tc24(self):
         """" INVALID BUDGET: Invalid budget value - budget value > 100000.00 """
         manager = EnterpriseManager()
         self.assertRaises(EnterpriseManagementException, manager.register_project, "B12345678",
-                          "PR001", "valid texts", "Logistics", "31/12/2026", 100000.01)
+                          "PR001", "valid texts", "Logistics", "31/12/2026", 1000000.01)
 
     # ECNV22
     @patch("uc3m_consulting.enterprise_project.hashlib.md5")
@@ -197,7 +197,7 @@ class MyTestCase(unittest.TestCase):
         manager = EnterpriseManager()
 
         with self.assertRaises(EnterpriseManagementException):
-            manager.register_project("B12345678", "PRO01", "car automatic development",
+            manager.register_project("B12345678", "PRO01", "valid text",
                                      "HR", "31/12/2027", 50000.00)
 
     # ECNV23
@@ -209,7 +209,7 @@ class MyTestCase(unittest.TestCase):
         manager = EnterpriseManager()
 
         with self.assertRaises(EnterpriseManagementException):
-            manager.register_project("B12345678", "PRO01", "car automatic development",
+            manager.register_project("B12345678", "PRO01", "valid text",
                                        "HR", "31/12/2027", 50000.00)
 
 if __name__ == '__main__':
