@@ -1,0 +1,11 @@
+(venv) ryanmichaelnuera@Ryans-MacBook-Pro-9 G87.2026.T04.GE2 % pylint uc3m_consulting
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+(venv) ryanmichaelnuera@Ryans-MacBook-Pro-9 G87.2026.T04.GE2 % pylint /Users/ryanmichaelnuera/PycharmProjects/G87.2026.T04.GE2/src/unittest/python/test_register_project_tests.py
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+NOTE: All uc3m_consulting files and test files follow pylint rules.

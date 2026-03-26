@@ -1,4 +1,4 @@
-""" ADD SOMETHING """
+""" This class is the Enterprise Manager. """
 import json
 from datetime import datetime
 
@@ -12,7 +12,8 @@ class EnterpriseManager:
 
     def register_project(self, company_cif: str, project_achronym: str, project_description: str,
                          department: str, date: str, budget: float):
-        """ ADD DOCSTRING"""
+        """ This method registers a new enterprise project based on the required inputs and is
+        added into a JSON File for reference"""
         # CIF Check
         if not isinstance(company_cif, str):
             raise EnterpriseManagementException("Invalid Company Cif")
@@ -59,10 +60,14 @@ class EnterpriseManager:
         try:
             if not isinstance(budget, float):
                 raise ValueError
-            if not (budget * 100).is_integer():
-                raise ValueError
+
+            s = f"{budget:.2f}"
+            if '.' not in s or len(s.split('.')[1]) != 2:
+                raise ValueError("Invalid Budget")
+
             if not 50000.00 <= budget <= 1000000.00:
                 raise ValueError
+
         except ValueError as exc:
             raise EnterpriseManagementException("Invalid Budget") from exc
 
@@ -84,12 +89,36 @@ class EnterpriseManager:
 
     @staticmethod
     def validate_cif(cif: str):
-        """RETURNs TRUE IF THE IBAN RECEIVED IS VALID SPANISH IBAN,
-        OR FALSE IN OTHER CASE"""
+        """RETURNS TRUE IF THE IBAN RECEIVED IS VALID SPANISH IBAN,
+        OR FALSE OTHERWISE"""
+
+        control_map = {0: "J", 1: "A", 2: "B", 3: "C", 4: "D",
+                       5: "E", 6: "F", 7: "G", 8: "H", 9: "I"}
+        letter_val = cif[0]
+        step_one = int(cif[2]) + int(cif[4]) + int(cif[6])
+        step_two = 0
+
+        for j in range(1, 9, 2):
+            num = int(cif[j]) * 2
+            if num > 9:
+                num = (num % 10) + (num // 10)
+            step_two += num
+
+        step_sum = step_one + step_two
+        unit = step_sum % 10
+        base_digit = 0 if unit == 0 else 10 - unit
+
+        if letter_val in ["A", "B", "E", "H"]:
+            control_char = base_digit
+        elif letter_val in ["K", "P", "Q", "S"]:
+            control_char = control_map[base_digit]
+        else:
+            return False
 
         if not cif[0].isalpha():
             return False
         if not len(cif) == 9:
             return False
 
-        return True
+        return str(control_char) == cif[8]
+        # RETURN TRUE IF THE GUID IS RIGHT, OR FALSE OTHERWISE

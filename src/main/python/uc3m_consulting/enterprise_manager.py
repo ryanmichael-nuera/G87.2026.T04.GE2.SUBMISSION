@@ -114,9 +114,8 @@ class EnterpriseManager:
             control_char = control_map[base_digit]
         else:
             return False
+        # NESTED IF_ELSE AUTOMATICALLY CHECKS IF FIRST CHAR IS LETTER
 
-        if not cif[0].isalpha():
-            return False
         if not len(cif) == 9:
             return False
 
