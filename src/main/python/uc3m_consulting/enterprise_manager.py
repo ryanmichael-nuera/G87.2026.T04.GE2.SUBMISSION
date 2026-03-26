@@ -89,12 +89,38 @@ class EnterpriseManager:
 
     @staticmethod
     def validate_cif(cif: str):
-        """RETURNs TRUE IF THE IBAN RECEIVED IS VALID SPANISH IBAN,
+        """RETURNS TRUE IF THE IBAN RECEIVED IS VALID SPANISH IBAN,
         OR FALSE IN OTHER CASE"""
 
-        if not cif[0].isalpha():
-            return False
-        if not len(cif) == 9:
+        control_map = {0: "J", 1: "A", 2: "B", 3: "C", 4: "D",
+                       5: "E", 6: "F", 7: "G", 8: "H", 9: "I"}
+        letter_val = cif[0]
+        step_one = int(cif[2]) + int(cif[4]) + int(cif[6])
+        step_two = 0
+
+        for j in range(1, 9, 2):
+            num = int(cif[j]) * 2
+            if num > 9:
+                num = (num % 10) + (num // 10)
+            step_two += num
+
+        step_sum = step_one + step_two
+        unit = step_sum % 10
+        base_digit = 0 if unit == 0 else 10 - unit
+
+        if letter_val in ["A", "B", "E", "H"]:
+            control_char = base_digit
+        elif letter_val in ["K", "P", "Q", "S"]:
+            control_char = control_map[base_digit]
+        else:
             return False
 
-        return True
+        return str(control_char) == cif[8]
+        # RETURN TRUE IF THE GUID IS RIGHT, OR FALSE IN OTHER C
+
+        # if not cif[0].isalpha():
+        #     return False
+        # if not len(cif) == 9:
+        #     return False
+        #
+        # return True
