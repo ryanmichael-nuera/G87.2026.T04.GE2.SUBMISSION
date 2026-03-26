@@ -51,28 +51,28 @@ class MyTestCase(unittest.TestCase):
     def test_tc5(self):
         """" INVALID CIF """
         manager = EnterpriseManager()
-        self.assertRaises(EnterpriseManagementException, manager.register_project, 12345678,
+        self.assertRaises(EnterpriseManagementException, manager.register_project, 123456789,
                           "PR001", "valid text", "HR", "1/1/2027", 50000.00)
 
     # ECNV3, BLNV1
     def test_tc6(self):
         """" INVALID CIF : CIF_length = 8 """
         manager = EnterpriseManager()
-        self.assertRaises(EnterpriseManagementException, manager.register_project,"B1234567",
+        self.assertRaises(EnterpriseManagementException, manager.register_project,"A5881850",
                           "PR0000002", "valid texts", "Legal", "31/12/2026", 75000.00)
 
     # ECNV4, BLNV2
     def test_tc7(self):
         """" INVALID CIF : CIF_length = 10 """
         manager = EnterpriseManager()
-        self.assertRaises(EnterpriseManagementException, manager.register_project,"B123456789",
+        self.assertRaises(EnterpriseManagementException, manager.register_project,"A588185010",
                           "PR001", "valid texts", "Legal", "31/12/2026", 75000.00)
 
     # ECNV5
     def test_tc8(self):
         """" INVALID CIF : First char is not a letter"""
         manager = EnterpriseManager()
-        self.assertRaises(EnterpriseManagementException,manager.register_project,"712345678",
+        self.assertRaises(EnterpriseManagementException,manager.register_project,"158818501",
                           "PR001", "valid texts", "Legal", "31/12/2026", 50000.00)
 
     #ECNV6
