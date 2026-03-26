@@ -13,7 +13,7 @@ class MyTestCase(unittest.TestCase):
     def test_tc1(self):
         """ VALID CASE 1 """
         manager = EnterpriseManager()
-        obj = manager.register_project("B12345678","PRO01", "valid text",
+        obj = manager.register_project("A58818501","PRO01", "valid text",
         "HR", "31/12/2027", 50000.00)
         self.assertIsInstance(obj, str, "return should be string")
         self.assertEqual(len(obj), 32, "should be length of 32")
@@ -22,7 +22,7 @@ class MyTestCase(unittest.TestCase):
     def test_tc2(self):
         """ VALID CASE 2 """
         manager = EnterpriseManager()
-        obj = manager.register_project("B12345678","890478", "valid texts",
+        obj = manager.register_project("A58818501","890478", "valid texts",
         "Finance", str(datetime.today().strftime("%d/%m/%Y")), 50000.01)
         self.assertIsInstance(obj, str, "return should be string")
         self.assertEqual(len(obj), 32, "should be length of 32")
@@ -31,7 +31,7 @@ class MyTestCase(unittest.TestCase):
     def test_tc3(self):
         """ VALID CASE 3 """
         manager = EnterpriseManager()
-        obj = manager.register_project("B12345678","PR0000002", "valid textvalid textvalid tex",
+        obj = manager.register_project("A58818501","PR0000002", "valid textvalid textvalid tex",
         "Legal", "01/01/2027", 999999.99)
         self.assertIsInstance(obj, str, "return should be string")
         self.assertEqual(len(obj), 32, "should be length of 32")
@@ -40,7 +40,7 @@ class MyTestCase(unittest.TestCase):
     def test_tc4(self):
         """" VALID CASE 4 """
         manager = EnterpriseManager()
-        obj = manager.register_project("B12345678","PRCF538FG0", "valid textvalid textvalid text",
+        obj = manager.register_project("A58818501","PRCF538FG0", "valid textvalid textvalid text",
         "Logistics", "31/12/2027", 1000000.00)
         self.assertIsInstance(obj, str, "return should be string")
         self.assertEqual(len(obj), 32, "should be length of 32")

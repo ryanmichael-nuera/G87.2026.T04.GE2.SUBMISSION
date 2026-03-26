@@ -115,5 +115,10 @@ class EnterpriseManager:
         else:
             return False
 
+        if not cif[0].isalpha():
+            return False
+        if not len(cif) == 9:
+            return False
+
         return str(control_char) == cif[8]
         # RETURN TRUE IF THE GUID IS RIGHT, OR FALSE OTHERWISE
